@@ -1,23 +1,56 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atlas Voyages – Explorer le monde</title>
 
-    <!-- Police Google Fonts : Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Voyages – Explorer le monde</title>
 
-    <!-- Si tu utilises un framework CSS (Bootstrap, Tailwind…), ajoute son lien ICI, AVANT style.css -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Police Google Fonts : Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- defer : le script s'exécute une fois le HTML chargé -->
-    <script src="script.js" defer></script>
-  </head>
-  <body></body>
+  <!-- Si tu utilises un framework CSS (Bootstrap, Tailwind…), ajoute son lien ICI, AVANT style.css -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- defer : le script s'exécute une fois le HTML chargé -->
+  <!-- <script src="script.js" defer></script> -->
+</head>
+
+<body>
+  <header>
+    <h2>Atlas Voyages</h2>
+  </header>
+  <main>
+    <section class="explorer-le-monde">
+      <h1>Explorer le monde</h1>
+      <p>Choisis un continent, parcours les pays et trouve ta prochaine destination.</p>
+    </section>
+    <section class="rechereche">
+      <div id="continent">
+        <p>Continent</p>
+        <select id="select-region" value=""> tous la region</select>
+      </div>
+      <div id="recherche-de-pays">
+        <p>Rechercher un pays</p>
+        <input type="text" id="recherche-de-pays" placeholder="EX : Morocco">
+      </div>
+      <div>
+        <button id="trier-par-population">Trier par population</button>
+      </div>
+    </section>
+    <section id="cards-container">
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Atlas Voyages · Données : countries.dev</p>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+  <script src="/node_modules/axios/dist/axios.min.js"></script>
+</body>
+
 </html>

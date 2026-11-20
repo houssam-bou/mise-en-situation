@@ -1,7 +1,16 @@
+
 const API_URL = "https://countries.dev/countries";
+const cardsContainer = document.getElementById("cards-container");
+
+
+
+
+export { API_URL, displayCountries }
+
+
 
 // Tous les pays reçus de l'API (rempli une seule fois, au chargement)
-let allCountries = [];
+// let allCountries = [];
 
 // TODO : récupère ici les éléments du DOM dont tu as besoin
 
@@ -12,9 +21,9 @@ let allCountries = [];
  *
  * @returns {Promise<Array>} Le tableau de tous les pays.
  */
-async function fetchCountries() {
-  // TODO
-}
+// async function fetchCountries() {
+//   // TODO
+// }
 
 /**
  * Crée la carte HTML d'un pays, sur le modèle de la maquette :
@@ -23,8 +32,19 @@ async function fetchCountries() {
  * @param {Object} country - Un pays tel que renvoyé par l'API.
  * @returns {HTMLElement} La carte, prête à être ajoutée à la grille.
  */
-function createCountryCard(country) {
+function displayCountries(allCountries) {
   // TODO
+  cardsContainer.innerHTML = "";
+
+  allCountries.forEach(element => {
+    cardsContainer.innerHTML += `<article>
+    <img src=https://countries.dev/countries/"${element.flags}" alt="#">
+    <h3> ${element.name}</h3>
+    <p>Capitale : ${element.capital}</p>
+    <p>Population : ${element.population}</p>
+    
+    </article>`
+  });
 }
 
 /**
@@ -35,9 +55,9 @@ function createCountryCard(country) {
  *
  * @param {Array} countries - Les pays à afficher.
  */
-function displayCountries(countries) {
-  // TODO
-}
+// function displayCountries(countries) {
+//   // TODO
+// }
 
 /**
  * Applique les deux filtres EN MÊME TEMPS sur allCountries :
