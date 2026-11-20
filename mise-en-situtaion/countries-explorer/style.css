@@ -1,16 +1,139 @@
 :root {
-  --color-primary: #0f4c81; /* en-tête, bouton, focus */
-  --color-bg: #f5f7fa; /* fond de la page */
-  --color-surface: #ffffff; /* cartes, formulaire, champs */
-  --color-text: #1a2433; /* texte principal */
-  --color-muted: #5b6576; /* texte secondaire */
-  --color-border: #d9e0e8; /* bordures */
-  --color-error-bg: #fdecec; /* fond du message d'erreur (bonus) */
-  --color-error-text: #b42318; /* texte du message d'erreur (bonus) */
+  --color-primary: #0f4c81;
+  /* en-tête, bouton, focus */
+  --color-bg: #f5f7fa;
+  /* fond de la page */
+  --color-surface: #ffffff;
+  /* cartes, formulaire, champs */
+  --color-text: #1a2433;
+  /* texte principal */
+  --color-muted: #5b6576;
+  /* texte secondaire */
+  --color-border: #d9e0e8;
+  /* bordures */
+  --color-error-bg: #fdecec;
+  /* fond du message d'erreur (bonus) */
+  --color-error-text: #b42318;
+  /* texte du message d'erreur (bonus) */
 
   /* Police de la maquette : Inter (Google Fonts), ou une police système */
 }
 
+* {
+  margin: 0;
+}
+
 body {
   font-family: "Inter", system-ui, sans-serif;
+
+}
+
+main {
+  padding-top: 56px;
+  padding-right: 120px;
+  padding-bottom: 72px;
+  padding-left: 120px;
+}
+
+header {
+  font-family: "Inter", system-ui, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #0F4C81;
+  padding: 20px 120px;
+
+}
+footer{
+  background-color: #FFFFFF;
+  padding: 24px 120px;
+  border-top: 1;
+  border-color: #D9E0E8;
+}
+
+header h2 {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.explorer-le-monde {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.explorer-le-monde p {
+  color: #5B6576;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.rechereche {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  gap: 24px;
+  border: 1px;
+  border-radius: 12px;
+  background-color: #D9E0E8;
+}
+
+.rechereche p {
+  color: #1A2433;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#continent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#recherche-de-pays {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#trier-par-population {
+  background-color: #0F4C81;
+  border-radius: 8px;
+  width: 209px;
+  height: 46px;
+  padding: 14px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#select-region {
+  cursor: pointer;
+}
+
+#cards-container {
+  padding: 25px;
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+article {
+  border: 1;
+  border-radius: 12px;
+  background-color: #D9E0E8;
+  width: 384px;
+  height: 222px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
